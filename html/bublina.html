@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bublina se základními hodnotami</title>
+<style>
+  .bubbleWrapper_special {
+    display: flex;
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+  }
+  .bubbleLeft_special {
+    background-color: #111; /* černá */
+    color: white;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .bubbleRight_special {
+    background-color: #f5f5f5;
+    width: 60%;
+    padding: 20px;
+  }
+  .bubbleRight_special ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .bubbleRight_special ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  .bubbleRight_special ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: #111;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<div class="bubbleWrapper_special">
+  <div class="bubbleLeft_special">
+    Základní hodnoty
+  </div>
+  <div class="bubbleRight_special">
+    <ul>
+      <li>První bod, který si napíšeš</li>
+      <li>Druhý důležitý bod</li>
+      <li>Třetí věc, kterou chceš zdůraznit</li>
+      <li>A tak dále...</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

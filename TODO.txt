@@ -1,0 +1,1 @@
+1. Udelat to ze jakmile je vetsi rozliseni tak toho karla moderniho zmensit - index.html radka 33 img-comp-img = height

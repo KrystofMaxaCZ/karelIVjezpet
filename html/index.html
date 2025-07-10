@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/body.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <title>Domov</title>
+  
+</head>
+<body>
+  
+<!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">👑 Karel IV. se vrací 👑</div>
+    <div class="nav-links">
+      <a href="index.html">O mne</a>
+      <a href="minulost.html">Minulost</a>
+      <a href="soucastnost.html">Soucasnost</a>
+    </div>
+  </nav>
+
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img style="height: 140%;" src="/images/ModerniKarel.png" alt="Obrázek 1" />
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+      <img src="/images/StaryKarel.jpg" alt="Obrázek 2" />
+    </div>
+  </div>
+  
+
+  <div class="container-obrazky">
+    <img clas src="karelIV.jpg" alt="">
+    <img src="foto2.jpg" alt="">
+  </div>
+
+  <div class="bubbleWrapper_special_header">
+    <h1>Karel IV. se vrací – 5 pilířů moudrého vládce pro dnešní svět</h1>
+  </div>
+  <div class="bubbleWrapper_special">
+    <div class="bubbleLeft_special">
+      Základní hodnoty
+    </div>
+
+    <div class="bubbleRight_special">
+      <ul>
+        <li>Pravda jako základ vlády i každodenního života</li>
+        <li>Láska k lidem, zemi i vzdělání</li>
+        <li>Spolehlivost jako královská ctnost</li>
+        <li>Jednota skrze rozmanitost</li>
+        <li>Vize pro budoucnost – s kořeny v moudrosti minulosti</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Karel IV. Online</h2>
+        <p>Odkaz českého krále v moderním světě. Pravda. Láska. Spolehlivost.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Odkazy</h3>
+        <ul>
+          <li><a href="#">Domů</a></li>
+          <li><a href="#">O Karlovi</a></li>
+          <li><a href="#">Hodnoty</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sleduj nás</h3>
+        <div class="social-icons">
+          <a href="#"><img src="facebook-icon.svg" alt="Facebook" /></a>
+          <a href="#"><img src="instagram-icon.svg" alt="Instagram" /></a>
+          <a href="#"><img src="twitter-icon.svg" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Karel IV. Revival. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+  <script>
+    function initComparisons() {
+  const overlays = document.getElementsByClassName("img-comp-overlay");
+  for (let i = 0; i < overlays.length; i++) {
+    compareImages(overlays[i]);
+  }
+
+  function compareImages(img) {
+    let slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    img.parentElement.insertBefore(slider, img);
+
+    let clicked = false;
+    const container = img.parentElement;
+
+    function getCursorPos(e) {
+      e = e.changedTouches ? e.changedTouches[0] : e;
+      const rect = container.getBoundingClientRect();
+      let x = e.pageX - rect.left - window.pageXOffset;
+      if (x < 0) x = 0;
+      if (x > container.offsetWidth) x = container.offsetWidth;
+      return x;
+    }
+
+    function slide(x) {
+      img.style.width = x + "px";
+      slider.style.left = (x - slider.offsetWidth / 2) + "px";
+    }
+
+    function slideReady(e) {
+      e.preventDefault();
+      clicked = true;
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+
+    function slideFinish() {
+      clicked = false;
+      window.removeEventListener("mousemove", slideMove);
+      window.removeEventListener("touchmove", slideMove);
+    }
+
+    function slideMove(e) {
+      if (!clicked) return;
+      let x = getCursorPos(e);
+      slide(x);
+    }
+
+    // inicializace slideru a šířky overlay na polovinu
+    let startPos = container.offsetWidth / 2;
+    img.style.width = startPos + "px";
+    slider.style.left = (startPos - slider.offsetWidth / 2) + "px";
+
+    slider.addEventListener("mousedown", slideReady);
+    window.addEventListener("mouseup", slideFinish);
+    slider.addEventListener("touchstart", slideReady);
+    window.addEventListener("touchend", slideFinish);
+  }
+}
+
+window.onload = initComparisons;
+  </script>
+</body>
+</html>
