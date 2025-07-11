@@ -3,23 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/body.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script src="navbar.js"></script>
+
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="minulost.css">
   <title>Minulost</title>
-  
+ 
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">👑 Karel IV. se vrací 👑</div>
-    <div class="nav-links">
-      <a href="index.html">O mne</a>
-      <a href="minulost.html">Minulost</a>
-      <a href="soucastnost.html">Soucasnost</a>
-    
+ <!-- Navbar -->
+  <div class="navbar">
+    <h1>Karel IV</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </nav>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Úvod</a>
+      <a href="pritomnost.html">Přítomnost</a>
+      <a href="minulost.html">Minulost</a>
+    </div>
+  </div>
 
-  
+
+
+  <section class="pergament">
+
+    <div class="section-divider">Odkud jsme přišli?</div>
+
+    <div class="points">
+
+      <div class="point">
+        <h3>⚔️ Ztracená svoboda (1938–1989)</h3>
+        <p>Mnichov. Okupace. Normalizace. Lidé ztráceli právo rozhodovat. <strong>Když mluví moc, mlčí pravda.</strong></p>
+      </div>
+
+      <div class="point">
+        <h3>📢 Hlas lidu (1989)</h3>
+        <p>17. listopad, sametová revoluce. Lidé opět našli svůj hlas. <strong>Pravda a láska měly znovu šanci.</strong></p>
+      </div>
+
+      <div class="point">
+        <h3>🛠️ Budování demokracie (90. léta)</h3>
+        <p>Vznikaly instituce, média, volby. Společnost se učila být svobodná. <strong>Byli jsme noví, ale odhodlaní.</strong></p>
+      </div>
+
+      <div class="point">
+        <h3>📡 Vstup do EU (2004)</h3>
+        <p>Otevřely se hranice, přišla stabilita. Patříme na Západ. <strong>Ale i tam je třeba hájit své hodnoty.</strong></p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Karel IV. Online</h2>
+                <p>Odkaz českého krále v moderním světě. Pravda. Láska. Spolehlivost.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Odkazy</h3>
+                <ul>
+                <li><a href="#">Domů</a></li>
+                <li><a href="#">O Karlovi</a></li>
+                <li><a href="#">Hodnoty</a></li>
+                <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sleduj nás</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.svg" alt="Facebook" /></a>
+                    <a href="#"><img src="instagram-icon.svg" alt="Instagram" /></a>
+                    <a href="#"><img src="twitter-icon.svg" alt="Twitter" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Karel IV. Revival. Všechna práva vyhrazena.</p>
+        </div>
+  </footer>
 </body>
 </html>
