@@ -22,7 +22,7 @@ body {
   position: relative;
   height: 60vh;
   width: 100%;
-  background-image: url('staryorloj.jpg');
+  background-image: url('../images/staryorloj.jpg');
   background-size: cover;
   background-position: center;
 }

@@ -21,7 +21,7 @@ body {
   position: relative;
   height: 60vh;
   width: 100%;
-  background-image: url('novyorloj.jpg');
+  background-image: url('../images/novyorloj.jpg');
   background-size: cover;
   background-position: center;
 }
